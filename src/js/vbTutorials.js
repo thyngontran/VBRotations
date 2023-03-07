@@ -13,7 +13,7 @@
 class VBTutorial {
   NS = 'http://www.w3.org/2000/svg'
 
-  constructor (config, heightScaleFactor, courtScaleFactor) {
+  constructor(config, heightScaleFactor, courtScaleFactor) {
     const svgWidth = (typeof config.width === 'number') ? config.width : 900
     this.svg = {
       width: svgWidth,
@@ -37,7 +37,7 @@ class VBTutorial {
     this.svg.snapRoot = Snap(this.svg.svgRoot)
   }
 
-  getSVG () {
+  getSVG() {
     return this.svg.svgRoot
   }
 }
@@ -52,8 +52,8 @@ class VBTutorialServeReceieve extends VBTutorial {
   * We could use a transformation, but I'd rather have the final SVG to be "clean"
   */
 
-  constructor (config) {
-    super(config, (16/17), (1/1700))
+  constructor(config) {
+    super(config, (16 / 17), (1 / 1700))
     this.svg.rotationControlCirleRadius = this.svg.width * (24 / 1700)
 
     this.colours.rotationControlColour = (config.colours && typeof config.colours.rotationControlColour === 'string') ? config.colours.rotationControlColour : '#ffffff'
@@ -63,7 +63,7 @@ class VBTutorialServeReceieve extends VBTutorial {
 
     this.text = {
       'en': {
-        players: { s: 'S', o: 'O', m2: 'M2', m1: 'M1', h1: 'H1', h2: 'H2', l: 'L'},
+        players: { s: 'S', o: 'OP', m2: 'M2', m1: 'M1', h1: 'H1', h2: 'H2', l: 'L' },
         rotationControl: { serving: 'Serving', receiving: 'Receiving', s1: 'Setter at 1', s2: 'Setter at 2', s3: 'Setter at 3', s4: 'Setter at 4', s5: 'Setter at 5', s6: 'Setter at 6' },
         actionControl: { servingBase: 'Base', serve: 'Serve', set: 'Set', switch: 'Switch', pass: 'Pass', attack: 'Attack' },
         tutorial: [
@@ -81,7 +81,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'it': {
-        players: { s: 'P', o: 'O', m2: 'C2', m1: 'C1', h1: 'S1', h2: 'S2', l: 'L'},
+        players: { s: 'P', o: 'OP', m2: 'C2', m1: 'C1', h1: 'S1', h2: 'S2', l: 'L' },
         rotationControl: { serving: 'Servizio', receiving: 'Ricezione', s1: 'P1', s2: 'P2', s3: 'P3', s4: 'P4', s5: 'P5', s6: 'P6' },
         actionControl: { servingBase: 'Base', serve: 'Servizio', set: 'Alzata', switch: 'Cambio', pass: 'Ricezione', attack: 'Attacco' },
         tutorial: [
@@ -99,7 +99,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'fr': {
-        players: { s: 'Pa', o: 'Po', m2: 'C2', m1: 'C1', h1: 'A1', h2: 'A2', l: 'L'},
+        players: { s: 'Pa', o: 'Po', m2: 'C2', m1: 'C1', h1: 'A1', h2: 'A2', l: 'L' },
         rotationControl: { serving: 'Service', receiving: 'Récevoir', s1: 'Passeur a 1', s2: 'Passeur a 2', s3: 'Passeur a 3', s4: 'Passeur a 4', s5: 'Passeur a 5', s6: 'Passeur a 6' },
         actionControl: { servingBase: 'Base', serve: 'Service', set: 'Passe', switch: 'Switch', pass: 'Récevoir', attack: 'Attaque' },
         tutorial: [
@@ -117,7 +117,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'pl': {
-        players: { s: 'R', o: 'A', m2: 'S2', m1: 'S1', h1: 'P1', h2: 'P2', l: 'L'},
+        players: { s: 'R', o: 'A', m2: 'S2', m1: 'S1', h1: 'P1', h2: 'P2', l: 'L' },
         rotationControl: { serving: 'Serwis', receiving: 'Przyjęcie', s1: 'Rozgrywający\nna pozycji nr 1', s2: 'Rozgrywający\nna pozycji nr 2', s3: 'Rozgrywający\nna pozycji nr 3', s4: 'Rozgrywający\nna pozycji nr 4', s5: 'Rozgrywający\nna pozycji nr 5', s6: 'Rozgrywający\nna pozycji nr 6' },
         actionControl: { servingBase: 'Ustawienie\npoczątkowe', serve: 'Serwis', set: 'Rozegranie', switch: 'Przejście', pass: 'Przyjęcie', attack: 'Atak' },
         tutorial: [
@@ -135,7 +135,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'nl': {
-        players: { s: 'S', o: 'D', m2: 'M2', m1: 'M1', h1: 'P1', h2: 'P2', l: 'L'},
+        players: { s: 'S', o: 'D', m2: 'M2', m1: 'M1', h1: 'P1', h2: 'P2', l: 'L' },
         rotationControl: { serving: 'Serveren', receiving: 'Ontvangen', s1: 'Spelverdeler\nop 1', s2: 'Spelverdeler\nop 2', s3: 'Spelverdeler\nop 3', s4: 'Spelverdeler\nop 4', s5: 'Spelverdeler\nop 5', s6: 'Spelverdeler\nop 6' },
         actionControl: { servingBase: 'Basis', serve: 'Service', set: 'Set', switch: 'Wissel', pass: 'Pass', attack: 'Aanval' },
         tutorial: [
@@ -153,7 +153,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'es': {
-        players: { s: 'Co', o: 'O', m2: 'C2', m1: 'C1', h1: 'A1', h2: 'A2', l: 'L'},
+        players: { s: 'Co', o: 'O', m2: 'C2', m1: 'C1', h1: 'A1', h2: 'A2', l: 'L' },
         rotationControl: { serving: 'Servicio', receiving: 'Recepción', s1: 'Colocador\nen zona 1', s2: 'Colocador\nen zona 2', s3: 'Colocador\nen zona 3', s4: 'Colocador\nen zona 4', s5: 'Colocador\nen zona 5', s6: 'Colocador\nen zona 6' },
         actionControl: { servingBase: 'Base', serve: 'Servicio', set: 'Colocación', switch: 'Cambio', pass: 'Pase', attack: 'Ataque' },
         tutorial: [
@@ -171,7 +171,7 @@ class VBTutorialServeReceieve extends VBTutorial {
         ]
       },
       'pt_br': {
-        players: { s: 'L', o: 'OP', m2: 'C2', m1: 'C1', h1: 'P1', h2: 'P2', l: 'Li'},
+        players: { s: 'L', o: 'OP', m2: 'C2', m1: 'C1', h1: 'P1', h2: 'P2', l: 'Li' },
         rotationControl: { serving: 'Sacando', receiving: 'Recebendo', s1: 'Levantador na 1', s2: 'Levantador na 2', s3: 'Levantador na 3', s4: 'Levantador na 4', s5: 'Levantador na 5', s6: 'Levantador na 6' },
         actionControl: { servingBase: 'Base', serve: 'Saque', set: 'Levantamento', switch: 'Troca', pass: 'Passe', attack: 'Ataque' },
         tutorial: [
@@ -190,184 +190,184 @@ class VBTutorialServeReceieve extends VBTutorial {
       },
     }
 
-    this.language = (typeof config.language === 'string' && Object.keys(this.text).includes(config.language) ) ? config.language : 'en'
+    this.language = (typeof config.language === 'string' && Object.keys(this.text).includes(config.language)) ? config.language : 'en'
 
     this.tutorialData = [
       {
         boxPosition: {
-          left:   450 * this.svg.scale,
-          right:  650 * this.svg.scale,
-          top:    700 * this.svg.scale,
+          left: 450 * this.svg.scale,
+          right: 650 * this.svg.scale,
+          top: 700 * this.svg.scale,
           bottom: 890 * this.svg.scale,
         },
         textPosition: {
-          left:   700 * this.svg.scale,
-          right:  1320 * this.svg.scale,
-          top:    700 * this.svg.scale,
+          left: 700 * this.svg.scale,
+          right: 1320 * this.svg.scale,
+          top: 700 * this.svg.scale,
           bottom: 920 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[2],
         nextPosition: {
           left: 1080 * this.svg.scale,
-          top:  950 * this.svg.scale,
+          top: 950 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   112 * this.svg.scale,
-          right:  988 * this.svg.scale,
-          top:    112 * this.svg.scale,
+          left: 112 * this.svg.scale,
+          right: 988 * this.svg.scale,
+          top: 112 * this.svg.scale,
           bottom: 986 * this.svg.scale,
         },
         textPosition: {
-          left:   1050 * this.svg.scale,
-          right:  1670 * this.svg.scale,
-          top:    400 * this.svg.scale,
+          left: 1050 * this.svg.scale,
+          right: 1670 * this.svg.scale,
+          top: 400 * this.svg.scale,
           bottom: 600 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[3],
         nextPosition: {
           left: 1430 * this.svg.scale,
-          top:  650 * this.svg.scale,
+          top: 650 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   1150 * this.svg.scale,
-          right:  1690 * this.svg.scale,
-          top:    50 * this.svg.scale,
+          left: 1150 * this.svg.scale,
+          right: 1690 * this.svg.scale,
+          top: 50 * this.svg.scale,
           bottom: 1070 * this.svg.scale,
         },
         textPosition: {
-          left:   480 * this.svg.scale,
-          right:  1100 * this.svg.scale,
-          top:    50 * this.svg.scale,
+          left: 480 * this.svg.scale,
+          right: 1100 * this.svg.scale,
+          top: 50 * this.svg.scale,
           bottom: 270 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[4],
         nextPosition: {
           left: 860 * this.svg.scale,
-          top:  300 * this.svg.scale,
+          top: 300 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   1150 * this.svg.scale,
-          right:  1330 * this.svg.scale,
-          top:    50 * this.svg.scale,
+          left: 1150 * this.svg.scale,
+          right: 1330 * this.svg.scale,
+          top: 50 * this.svg.scale,
           bottom: 1070 * this.svg.scale,
         },
         textPosition: {
-          left:   480 * this.svg.scale,
-          right:  1100 * this.svg.scale,
-          top:    150 * this.svg.scale,
+          left: 480 * this.svg.scale,
+          right: 1100 * this.svg.scale,
+          top: 150 * this.svg.scale,
           bottom: 350 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[5],
         nextPosition: {
           left: 860 * this.svg.scale,
-          top:  400 * this.svg.scale,
+          top: 400 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   1330 * this.svg.scale,
-          right:  1510 * this.svg.scale,
-          top:    50 * this.svg.scale,
+          left: 1330 * this.svg.scale,
+          right: 1510 * this.svg.scale,
+          top: 50 * this.svg.scale,
           bottom: 1070 * this.svg.scale,
         },
         textPosition: {
-          left:   480 * this.svg.scale,
-          right:  1100 * this.svg.scale,
-          top:    250 * this.svg.scale,
+          left: 480 * this.svg.scale,
+          right: 1100 * this.svg.scale,
+          top: 250 * this.svg.scale,
           bottom: 450 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[6],
         nextPosition: {
           left: 860 * this.svg.scale,
-          top:  500 * this.svg.scale,
+          top: 500 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   1150 * this.svg.scale,
-          right:  1510 * this.svg.scale,
-          top:    50 * this.svg.scale,
+          left: 1150 * this.svg.scale,
+          right: 1510 * this.svg.scale,
+          top: 50 * this.svg.scale,
           bottom: 1070 * this.svg.scale,
         },
         textPosition: {
-          left:   480 * this.svg.scale,
-          right:  1100 * this.svg.scale,
-          top:    350 * this.svg.scale,
+          left: 480 * this.svg.scale,
+          right: 1100 * this.svg.scale,
+          top: 350 * this.svg.scale,
           bottom: 550 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[7],
         nextPosition: {
           left: 860 * this.svg.scale,
-          top:  600 * this.svg.scale,
+          top: 600 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   10 * this.svg.scale,
-          right:  1110 * this.svg.scale,
-          top:    1120 * this.svg.scale,
+          left: 10 * this.svg.scale,
+          right: 1110 * this.svg.scale,
+          top: 1120 * this.svg.scale,
           bottom: 1570 * this.svg.scale,
         },
         textPosition: {
-          left:   90 * this.svg.scale,
-          right:  710 * this.svg.scale,
-          top:    880 * this.svg.scale,
+          left: 90 * this.svg.scale,
+          right: 710 * this.svg.scale,
+          top: 880 * this.svg.scale,
           bottom: 1080 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[8],
         nextPosition: {
           left: 760 * this.svg.scale,
-          top:  1000 * this.svg.scale,
+          top: 1000 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   10 * this.svg.scale,
-          right:  1110 * this.svg.scale,
-          top:    1120 * this.svg.scale,
+          left: 10 * this.svg.scale,
+          right: 1110 * this.svg.scale,
+          top: 1120 * this.svg.scale,
           bottom: 1334 * this.svg.scale,
         },
         textPosition: {
-          left:   140 * this.svg.scale,
-          right:  760 * this.svg.scale,
-          top:    880 * this.svg.scale,
+          left: 140 * this.svg.scale,
+          right: 760 * this.svg.scale,
+          top: 880 * this.svg.scale,
           bottom: 1080 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[9],
         nextPosition: {
           left: 810 * this.svg.scale,
-          top:  1000 * this.svg.scale,
+          top: 1000 * this.svg.scale,
         },
       },
       {
         boxPosition: {
-          left:   10 * this.svg.scale,
-          right:  1110 * this.svg.scale,
-          top:    1336 * this.svg.scale,
+          left: 10 * this.svg.scale,
+          right: 1110 * this.svg.scale,
+          top: 1336 * this.svg.scale,
           bottom: 1570 * this.svg.scale,
         },
         textPosition: {
-          left:   190 * this.svg.scale,
-          right:  810 * this.svg.scale,
-          top:    880 * this.svg.scale,
+          left: 190 * this.svg.scale,
+          right: 810 * this.svg.scale,
+          top: 880 * this.svg.scale,
           bottom: 1080 * this.svg.scale,
         },
         text: this.text[this.language].tutorial[10],
         nextPosition: {
           left: 860 * this.svg.scale,
-          top:  1000 * this.svg.scale,
+          top: 1000 * this.svg.scale,
         },
       },
     ]
 
     this.court = new VBHalfCourt({
-      width: (11/17) * this.svg.width
+      width: (11 / 17) * this.svg.width
     })
 
     this.svg.snapRoot.append(this.court.getSVG())
@@ -376,449 +376,449 @@ class VBTutorialServeReceieve extends VBTutorial {
     this.playerPositions = {
       servingBase: {
         1: {
-          s:  { x: 700, y: 600 },
+          s: { x: 700, y: 600 },
           h1: { x: 700, y: 100 },
           m2: { x: 450, y: 100 },
-          o:  { x: 200, y: 100 },
+          o: { x: 200, y: 100 },
           h2: { x: 200, y: 600 },
           l: { x: 450, y: 700 },
-          m1:  { x: -64, y: 700 }
+          m1: { x: -64, y: 700 }
         },
         2: {
           m1: { x: 700, y: 600 },
-          s:  { x: 700, y: 100 },
+          s: { x: 700, y: 100 },
           h1: { x: 450, y: 100 },
           m2: { x: 200, y: 100 },
-          o:  { x: 200, y: 600 },
+          o: { x: 200, y: 600 },
           h2: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 700, y: 600 },
           m1: { x: 700, y: 100 },
-          s:  { x: 450, y: 100 },
+          s: { x: 450, y: 100 },
           h1: { x: 200, y: 100 },
           l: { x: 200, y: 600 },
-          o:  { x: 450, y: 700 },
-          m2:  { x: -64, y: 700 }
+          o: { x: 450, y: 700 },
+          m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 700, y: 600 },
+          o: { x: 700, y: 600 },
           h2: { x: 700, y: 100 },
           m1: { x: 450, y: 100 },
-          s:  { x: 200, y: 100 },
+          s: { x: 200, y: 100 },
           h1: { x: 200, y: 600 },
           l: { x: 450, y: 700 },
-          m2:  { x: -64, y: 700 }
+          m2: { x: -64, y: 700 }
         },
         5: {
           m2: { x: 700, y: 600 },
-          o:  { x: 700, y: 100 },
+          o: { x: 700, y: 100 },
           h2: { x: 450, y: 100 },
           m1: { x: 200, y: 100 },
-          s:  { x: 200, y: 600 },
+          s: { x: 200, y: 600 },
           h1: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 700, y: 600 },
           m2: { x: 700, y: 100 },
-          o:  { x: 450, y: 100 },
+          o: { x: 450, y: 100 },
           h2: { x: 200, y: 100 },
           l: { x: 200, y: 600 },
-          s:  { x: 450, y: 700 },
-          m1:  { x: -64, y: 700 }
+          s: { x: 450, y: 700 },
+          m1: { x: -64, y: 700 }
         }
       },
       servingServe: {
         1: {
-          s:  { x: 700, y: 940 },
-          h1: { x: 580, y: 100 },
-          m2: { x: 450, y: 100 },
-          o:  { x: 320, y: 100 },
-          h2: { x: 200, y: 600 },
+          s: { x: 700, y: 940 },
+          h1: { x: 580, y: 60 },
+          m2: { x: 450, y: 60 },
+          o: { x: 320, y: 60 },
+          h2: { x: 200, y: 400 },
           l: { x: 450, y: 700 },
-          m1:  { x: -64, y: 700 }
+          m1: { x: -64, y: 700 }
         },
         2: {
           m1: { x: 700, y: 940 },
-          s:  { x: 580, y: 100 },
-          h1: { x: 450, y: 100 },
-          m2: { x: 320, y: 100 },
-          o:  { x: 200, y: 600 },
+          s: { x: 580, y: 60 },
+          h1: { x: 450, y: 60 },
+          m2: { x: 320, y: 60 },
+          o: { x: 200, y: 400 },
           h2: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 700, y: 940 },
-          m1: { x: 580, y: 100 },
-          s:  { x: 450, y: 100 },
-          h1: { x: 320, y: 100 },
-          l: { x: 200, y: 600 },
-          o:  { x: 450, y: 700 },
-          m2:  { x: -64, y: 700 }
+          m1: { x: 580, y: 60 },
+          s: { x: 450, y: 60 },
+          h1: { x: 320, y: 60 },
+          l: { x: 200, y: 400 },
+          o: { x: 450, y: 700 },
+          m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 700, y: 940 },
-          h2: { x: 580, y: 100 },
-          m1: { x: 450, y: 100 },
-          s:  { x: 320, y: 100 },
-          h1: { x: 200, y: 600 },
+          o: { x: 700, y: 940 },
+          h2: { x: 580, y: 60 },
+          m1: { x: 450, y: 60 },
+          s: { x: 320, y: 60 },
+          h1: { x: 200, y: 400 },
           l: { x: 450, y: 700 },
-          m2:  { x: -64, y: 700 }
+          m2: { x: -64, y: 700 }
         },
         5: {
           m2: { x: 700, y: 940 },
-          o:  { x: 580, y: 100 },
-          h2: { x: 450, y: 100 },
-          m1: { x: 320, y: 100 },
-          s:  { x: 200, y: 600 },
+          o: { x: 580, y: 60 },
+          h2: { x: 450, y: 60 },
+          m1: { x: 320, y: 60 },
+          s: { x: 200, y: 400 },
           h1: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 700, y: 940 },
-          m2: { x: 580, y: 100 },
-          o:  { x: 450, y: 100 },
-          h2: { x: 320, y: 100 },
-          l: { x: 200, y: 600 },
-          s:  { x: 450, y: 700 },
-          m1:  { x: -64, y: 700 }
+          m2: { x: 580, y: 60 },
+          o: { x: 450, y: 60 },
+          h2: { x: 320, y: 60 },
+          l: { x: 200, y: 400 },
+          s: { x: 450, y: 700 },
+          m1: { x: -64, y: 700 }
         }
       },
       servingSwitch: {
         1: {
-          s:  { x: 700, y: 600 },
-          h1: { x: 200, y: 100 },
-          m2: { x: 450, y: 100 },
-          o:  { x: 700, y: 100 },
+          s: { x: 700, y: 400 },
+          h1: { x: 200, y: 60 },
+          m2: { x: 450, y: 60 },
+          o: { x: 700, y: 60 },
           h2: { x: 450, y: 700 },
-          l: { x: 200, y: 600 },
-          m1:  { x: -64, y: 700 }
+          l: { x: 200, y: 400 },
+          m1: { x: -64, y: 700 }
         },
         2: {
-          m1: { x: 200, y: 600 },
-          s:  { x: 700, y: 100 },
-          h1: { x: 200, y: 100 },
-          m2: { x: 450, y: 100 },
-          o:  { x: 700, y: 600 },
+          m1: { x: 200, y: 400 },
+          s: { x: 700, y: 60 },
+          h1: { x: 200, y: 60 },
+          m2: { x: 450, y: 60 },
+          o: { x: 700, y: 400 },
           h2: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 450, y: 700 },
-          m1: { x: 450, y: 100 },
-          s:  { x: 700, y: 100 },
-          h1: { x: 200, y: 100 },
-          l: { x: 200, y: 600 },
-          o:  { x: 700, y: 600 },
-          m2:  { x: -64, y: 700 }
+          m1: { x: 450, y: 60 },
+          s: { x: 700, y: 60 },
+          h1: { x: 200, y: 60 },
+          l: { x: 200, y: 400 },
+          o: { x: 700, y: 400 },
+          m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 700, y: 600 },
-          h2: { x: 200, y: 100 },
-          m1: { x: 450, y: 100 },
-          s:  { x: 700, y: 100 },
+          o: { x: 700, y: 400 },
+          h2: { x: 200, y: 60 },
+          m1: { x: 450, y: 60 },
+          s: { x: 700, y: 60 },
           h1: { x: 450, y: 700 },
-          l: { x: 200, y: 600 },
-          m2:  { x: -64, y: 700 }
+          l: { x: 200, y: 400 },
+          m2: { x: -64, y: 700 }
         },
         5: {
-          m2: { x: 200, y: 600 },
-          o:  { x: 700, y: 100 },
-          h2: { x: 200, y: 100 },
-          m1: { x: 450, y: 100 },
-          s:  { x: 700, y: 600 },
+          m2: { x: 200, y: 400 },
+          o: { x: 700, y: 60 },
+          h2: { x: 200, y: 60 },
+          m1: { x: 450, y: 60 },
+          s: { x: 700, y: 400 },
           h1: { x: 450, y: 700 },
-          l:  { x: -64, y: 700 }
+          l: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 450, y: 700 },
-          m2: { x: 450, y: 100 },
-          o:  { x: 700, y: 100 },
-          h2: { x: 200, y: 100 },
-          l: { x: 200, y: 600 },
-          s:  { x: 700, y: 600 },
-          m1:  { x: -64, y: 700 }
+          m2: { x: 450, y: 60 },
+          o: { x: 700, y: 60 },
+          h2: { x: 200, y: 60 },
+          l: { x: 200, y: 400 },
+          s: { x: 700, y: 400 },
+          m1: { x: -64, y: 700 }
         }
       },
       receivingBase: {
         1: {
-          s:  { x: 700, y: 600 },
+          s: { x: 700, y: 600 },
           h1: { x: 700, y: 100 },
           m2: { x: 450, y: 100 },
-          o:  { x: 200, y: 100 },
+          o: { x: 200, y: 100 },
           h2: { x: 200, y: 600 },
-          l:  { x: 450, y: 700 },
+          l: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         },
         2: {
-          l:  { x: 700, y: 600 },
-          s:  { x: 700, y: 100 },
+          l: { x: 700, y: 600 },
+          s: { x: 700, y: 100 },
           h1: { x: 450, y: 100 },
           m2: { x: 200, y: 100 },
-          o:  { x: 200, y: 600 },
+          o: { x: 200, y: 600 },
           h2: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 700, y: 600 },
           m1: { x: 700, y: 100 },
-          s:  { x: 450, y: 100 },
+          s: { x: 450, y: 100 },
           h1: { x: 200, y: 100 },
-          l:  { x: 200, y: 600 },
-          o:  { x: 450, y: 700 },
+          l: { x: 200, y: 600 },
+          o: { x: 450, y: 700 },
           m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 700, y: 600 },
+          o: { x: 700, y: 600 },
           h2: { x: 700, y: 100 },
           m1: { x: 450, y: 100 },
-          s:  { x: 200, y: 100 },
+          s: { x: 200, y: 100 },
           h1: { x: 200, y: 600 },
-          l:  { x: 450, y: 700 },
+          l: { x: 450, y: 700 },
           m2: { x: -64, y: 700 }
         },
         5: {
-          l:  { x: 700, y: 600 },
-          o:  { x: 700, y: 100 },
+          l: { x: 700, y: 600 },
+          o: { x: 700, y: 100 },
           h2: { x: 450, y: 100 },
           m1: { x: 200, y: 100 },
-          s:  { x: 200, y: 600 },
+          s: { x: 200, y: 600 },
           h1: { x: 450, y: 700 },
           m2: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 700, y: 600 },
           m2: { x: 700, y: 100 },
-          o:  { x: 450, y: 100 },
+          o: { x: 450, y: 100 },
           h2: { x: 200, y: 100 },
-          l:  { x: 200, y: 600 },
-          s:  { x: 450, y: 700 },
+          l: { x: 200, y: 600 },
+          s: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         }
       },
       receivingPass: {
         1: {
-          s:  { x: 840, y: 700 },
+          s: { x: 840, y: 700 },
           h1: { x: 700, y: 600 },
-          m2: { x: 150, y: 60  },
-          o:  { x: 54,  y: 100 },
+          m2: { x: 150, y: 60 },
+          o: { x: 54, y: 100 },
           h2: { x: 200, y: 600 },
-          l:  { x: 450, y: 700 },
+          l: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         },
         2: {
           l: { x: 700, y: 600 },
-          s:  { x: 700, y: 100 },
+          s: { x: 700, y: 100 },
           h1: { x: 200, y: 600 },
-          m2:  { x: 40, y: 160 },
-          o:  { x: 260, y: 840 },
+          m2: { x: 40, y: 160 },
+          o: { x: 260, y: 840 },
           h2: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 700, y: 600 },
           m1: { x: 740, y: 140 },
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 200, y: 600 },
-          l:  { x: 450, y: 700 },
-          o:  { x: 560, y: 820 },
+          l: { x: 450, y: 700 },
+          o: { x: 560, y: 820 },
           m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 760, y: 820 },
+          o: { x: 760, y: 820 },
           h2: { x: 200, y: 600 },
           m1: { x: 140, y: 140 },
-          s:  { x: 60, y: 60 },
+          s: { x: 60, y: 60 },
           h1: { x: 450, y: 700 },
-          l:  { x: 700, y: 600 },
+          l: { x: 700, y: 600 },
           m2: { x: -64, y: 700 }
         },
         5: {
           l: { x: 700, y: 600 },
-          o:  { x: 840, y: 100 },
+          o: { x: 840, y: 100 },
           h2: { x: 200, y: 600 },
-          m1:  { x: 60, y: 60 },
-          s:  { x: 350, y: 140 },
+          m1: { x: 60, y: 60 },
+          s: { x: 350, y: 140 },
           h1: { x: 450, y: 700 },
           m2: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 700, y: 600 },
           m2: { x: 700, y: 140 },
-          o:  { x: 560, y: 60 },
+          o: { x: 560, y: 60 },
           h2: { x: 200, y: 600 },
-          l:  { x: 450, y: 700 },
-          s:  { x: 510, y: 170 },
+          l: { x: 450, y: 700 },
+          s: { x: 510, y: 170 },
           m1: { x: -64, y: 700 }
         }
       },
       receivingSet: {
         1: {
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 900, y: 300 },
           m2: { x: 450, y: 300 },
-          o:  { x: 0,   y: 300 },
+          o: { x: 0, y: 300 },
           h2: { x: 450, y: 600 },
-          l:  { x: 400, y: 700 },
+          l: { x: 400, y: 700 },
           m1: { x: -64, y: 700 }
         },
         2: {
           l: { x: 700, y: 600 },
-          s:  { x: 600, y: 100 },
-          h1: { x: 0,   y: 300 },
-          m2:  { x: 450, y: 300 },
-          o:  { x: 850, y: 600 },
+          s: { x: 600, y: 100 },
+          h1: { x: 0, y: 300 },
+          m2: { x: 450, y: 300 },
+          o: { x: 850, y: 600 },
           h2: { x: 430, y: 600 },
           m1: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 450, y: 600 },
           m1: { x: 450, y: 300 },
-          s:  { x: 600, y: 100 },
-          h1: { x: 0,   y: 300 },
-          l:  { x: 400, y: 700 },
-          o:  { x: 850, y: 600 },
+          s: { x: 600, y: 100 },
+          h1: { x: 0, y: 300 },
+          l: { x: 400, y: 700 },
+          o: { x: 850, y: 600 },
           m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 850, y: 600 },
-          h2: { x: 0,   y: 300 },
+          o: { x: 850, y: 600 },
+          h2: { x: 0, y: 300 },
           m1: { x: 450, y: 300 },
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 450, y: 700 },
-          l:  { x: 700, y: 600 },
+          l: { x: 700, y: 600 },
           m2: { x: -64, y: 700 }
         },
         5: {
           l: { x: 700, y: 600 },
-          o:  { x: 900, y: 300 },
-          h2: { x: 0,   y: 300 },
-          m1:  { x: 450, y: 300 },
-          s:  { x: 600, y: 100 },
+          o: { x: 900, y: 300 },
+          h2: { x: 0, y: 300 },
+          m1: { x: 450, y: 300 },
+          s: { x: 600, y: 100 },
           h1: { x: 450, y: 600 },
           m2: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 450, y: 600 },
           m2: { x: 450, y: 300 },
-          o:  { x: 900, y: 300 },
-          h2: { x: 0,   y: 300 },
-          l:  { x: 400, y: 700 },
-          s:  { x: 600, y: 100 },
+          o: { x: 900, y: 300 },
+          h2: { x: 0, y: 300 },
+          l: { x: 400, y: 700 },
+          s: { x: 600, y: 100 },
           m1: { x: -64, y: 700 }
         }
       },
       receivingAttack: {
         1: {
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 800, y: 100 },
           m2: { x: 450, y: 100 },
-          o:  { x: 100, y: 100 },
+          o: { x: 100, y: 100 },
           h2: { x: 450, y: 300 },
-          l:  { x: 400, y: 700 },
+          l: { x: 400, y: 700 },
           m1: { x: -64, y: 700 }
         },
         2: {
           l: { x: 700, y: 600 },
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 100, y: 100 },
-          m2:  { x: 450, y: 100 },
-          o:  { x: 840, y: 300 },
+          m2: { x: 450, y: 100 },
+          o: { x: 840, y: 300 },
           h2: { x: 440, y: 300 },
           m1: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 450, y: 300 },
           m1: { x: 450, y: 100 },
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 100, y: 100 },
-          l:  { x: 450, y: 700 },
-          o:  { x: 840, y: 300 },
+          l: { x: 450, y: 700 },
+          o: { x: 840, y: 300 },
           m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 840, y: 300 },
+          o: { x: 840, y: 300 },
           h2: { x: 100, y: 100 },
           m1: { x: 450, y: 100 },
-          s:  { x: 600, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 450, y: 700 },
-          l:  { x: 700, y: 600 },
+          l: { x: 700, y: 600 },
           m2: { x: -64, y: 700 }
         },
         5: {
           l: { x: 700, y: 600 },
-          o:  { x: 800, y: 100 },
+          o: { x: 800, y: 100 },
           h2: { x: 100, y: 100 },
-          m1:  { x: 450, y: 100 },
-          s:  { x: 600, y: 100 },
+          m1: { x: 450, y: 100 },
+          s: { x: 600, y: 100 },
           h1: { x: 450, y: 300 },
           m2: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 450, y: 300 },
           m2: { x: 450, y: 100 },
-          o:  { x: 800, y: 100 },
+          o: { x: 800, y: 100 },
           h2: { x: 100, y: 100 },
-          l:  { x: 400, y: 700 },
-          s:  { x: 600, y: 100 },
+          l: { x: 400, y: 700 },
+          s: { x: 600, y: 100 },
           m1: { x: -64, y: 700 }
         }
       },
       receivingSwitch: {
         1: {
-          s:  { x: 700, y: 600 },
+          s: { x: 700, y: 600 },
           h1: { x: 700, y: 100 },
           m2: { x: 450, y: 100 },
-          o:  { x: 200, y: 100 },
+          o: { x: 200, y: 100 },
           h2: { x: 450, y: 700 },
-          l:  { x: 200, y: 600 },
+          l: { x: 200, y: 600 },
           m1: { x: -64, y: 700 }
         },
         2: {
           l: { x: 200, y: 600 },
-          s:  { x: 700, y: 100 },
+          s: { x: 700, y: 100 },
           h1: { x: 200, y: 100 },
-          m2:  { x: 450, y: 100 },
-          o:  { x: 700, y: 600 },
+          m2: { x: 450, y: 100 },
+          o: { x: 700, y: 600 },
           h2: { x: 450, y: 700 },
           m1: { x: -64, y: 700 }
         },
         3: {
           h2: { x: 450, y: 700 },
           m1: { x: 450, y: 100 },
-          s:  { x: 700, y: 100 },
+          s: { x: 700, y: 100 },
           h1: { x: 200, y: 100 },
-          l:  { x: 200, y: 600 },
-          o:  { x: 700, y: 600 },
+          l: { x: 200, y: 600 },
+          o: { x: 700, y: 600 },
           m2: { x: -64, y: 700 }
         },
         4: {
-          o:  { x: 700, y: 600 },
+          o: { x: 700, y: 600 },
           h2: { x: 200, y: 100 },
           m1: { x: 450, y: 100 },
-          s:  { x: 700, y: 100 },
+          s: { x: 700, y: 100 },
           h1: { x: 450, y: 700 },
-          l:  { x: 200, y: 600 },
+          l: { x: 200, y: 600 },
           m2: { x: -64, y: 700 }
         },
         5: {
           l: { x: 200, y: 600 },
-          o:  { x: 700, y: 100 },
+          o: { x: 700, y: 100 },
           h2: { x: 200, y: 100 },
-          m1:  { x: 450, y: 100 },
-          s:  { x: 700, y: 600 },
+          m1: { x: 450, y: 100 },
+          s: { x: 700, y: 600 },
           h1: { x: 450, y: 700 },
           m2: { x: -64, y: 700 }
         },
         6: {
           h1: { x: 450, y: 700 },
           m2: { x: 450, y: 100 },
-          o:  { x: 700, y: 100 },
+          o: { x: 700, y: 100 },
           h2: { x: 200, y: 100 },
-          l:  { x: 200, y: 600 },
-          s:  { x: 700, y: 600 },
+          l: { x: 200, y: 600 },
+          s: { x: 700, y: 600 },
           m1: { x: -64, y: 700 }
         }
       },
@@ -841,7 +841,7 @@ class VBTutorialServeReceieve extends VBTutorial {
     this.showTutorial = typeof config.showTutorial === 'boolean' ? config.showTutorial : true
   }
 
-  draw () {
+  draw() {
     if (this.drawn) {
       return
     }
@@ -854,7 +854,7 @@ class VBTutorialServeReceieve extends VBTutorial {
     }
   }
 
-  multilineText (text, lineHeight, style) {
+  multilineText(text, lineHeight, style) {
     let textGroup
     text.split('\n').forEach((textChunks, i) => {
       let textLine = this.svg.snapRoot.text(0, 0 + (i * lineHeight * this.svg.scale), textChunks).attr(style)
@@ -867,7 +867,7 @@ class VBTutorialServeReceieve extends VBTutorial {
     return textGroup
   }
 
-  drawRotationControl () {
+  drawRotationControl() {
     const vOffset1 = 20 * this.svg.scale
     const vOffset2 = 140 * this.svg.scale
 
@@ -898,7 +898,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': '' + 28 * this.svg.scale,
     })
@@ -906,7 +906,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': '' + 28 * this.svg.scale,
     })
@@ -964,57 +964,57 @@ class VBTutorialServeReceieve extends VBTutorial {
 
     const joinLine1 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale, 280 * this.svg.scale, 100 * this.svg.scale + (1 * vOffset1)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
-        'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
+      'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine2 = this.svg.snapRoot.line(280 * this.svg.scale, 100 * this.svg.scale + (1 * vOffset1), 80 * this.svg.scale, 100 * this.svg.scale + (1 * vOffset1) + (1 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine3 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale + (1 * vOffset1) + (1 * vOffset2), 280 * this.svg.scale, 100 * this.svg.scale + (2 * vOffset1) + (1 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine4 = this.svg.snapRoot.line(280 * this.svg.scale, 100 * this.svg.scale + (2 * vOffset1) + (1 * vOffset2), 80 * this.svg.scale, 100 * this.svg.scale + (2 * vOffset1) + (2 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine5 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale + (2 * vOffset1) + (2 * vOffset2), 280 * this.svg.scale, 100 * this.svg.scale + (3 * vOffset1) + (2 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine6 = this.svg.snapRoot.line(280 * this.svg.scale, 100 * this.svg.scale + (3 * vOffset1) + (2 * vOffset2), 80 * this.svg.scale, 100 * this.svg.scale + (3 * vOffset1) + (3 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine7 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale + (3 * vOffset1) + (3 * vOffset2), 280 * this.svg.scale, 100 * this.svg.scale + (4 * vOffset1) + (3 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine8 = this.svg.snapRoot.line(280 * this.svg.scale, 100 * this.svg.scale + (4 * vOffset1) + (3 * vOffset2), 80 * this.svg.scale, 100 * this.svg.scale + (4 * vOffset1) + (4 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine9 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale + (4 * vOffset1) + (4 * vOffset2), 280 * this.svg.scale, 100 * this.svg.scale + (5 * vOffset1) + (4 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine10 = this.svg.snapRoot.line(280 * this.svg.scale, 100 * this.svg.scale + (5 * vOffset1) + (4 * vOffset2), 80 * this.svg.scale, 100 * this.svg.scale + (5 * vOffset1) + (5 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLine11 = this.svg.snapRoot.line(80 * this.svg.scale, 100 * this.svg.scale + (5 * vOffset1) + (5 * vOffset2), 280 * this.svg.scale, 100 * this.svg.scale + (6 * vOffset1) + (5 * vOffset2)).attr({
       stroke: this.colours.rotationControlColour,
-       strokeWidth: 4 * this.svg.scale,
+      strokeWidth: 4 * this.svg.scale,
       'stroke-dasharray': 8 * this.svg.scale + ', ' + 8 * this.svg.scale,
     })
     const joinLines = this.svg.snapRoot.group(joinLine1, joinLine2, joinLine3, joinLine4, joinLine5, joinLine6, joinLine7, joinLine8, joinLine9, joinLine10, joinLine11)
@@ -1110,26 +1110,26 @@ class VBTutorialServeReceieve extends VBTutorial {
       cursor: 'pointer',
     })
     const controlCircles = this.svg.snapRoot.group(this.controlOneSrv, this.controlTwoSrv, this.controlThreeSrv, this.controlFourSrv, this.controlFiveSrv, this.controlSixSrv,
-        this.controlOneRcv, this.controlTwoRcv, this.controlThreeRcv, this.controlFourRcv, this.controlFiveRcv, this.controlSixRcv)
+      this.controlOneRcv, this.controlTwoRcv, this.controlThreeRcv, this.controlFourRcv, this.controlFiveRcv, this.controlSixRcv)
 
-    this.controlTwoRcv.click(() => {this.state.setterAt = 2;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase);  this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlTwoSrv.click(() => {this.state.setterAt = 2;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlOneRcv.click(() => {this.state.setterAt = 1;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase);  this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlOneSrv.click(() => {this.state.setterAt = 1;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlSixRcv.click(() => {this.state.setterAt = 6;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase);  this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlSixSrv.click(() => {this.state.setterAt = 6;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlFiveRcv.click(() => {this.state.setterAt = 5;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlFiveSrv.click(() => {this.state.setterAt = 5;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlFourRcv.click(() => {this.state.setterAt = 4;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlFourSrv.click(() => {this.state.setterAt = 4;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlThreeRcv.click(() => {this.state.setterAt = 3;if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlThreeSrv.click(() => {this.state.setterAt = 3;if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
+    this.controlTwoRcv.click(() => { this.state.setterAt = 2; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlTwoSrv.click(() => { this.state.setterAt = 2; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlOneRcv.click(() => { this.state.setterAt = 1; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlOneSrv.click(() => { this.state.setterAt = 1; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlSixRcv.click(() => { this.state.setterAt = 6; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlSixSrv.click(() => { this.state.setterAt = 6; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlFiveRcv.click(() => { this.state.setterAt = 5; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlFiveSrv.click(() => { this.state.setterAt = 5; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlFourRcv.click(() => { this.state.setterAt = 4; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlFourSrv.click(() => { this.state.setterAt = 4; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlThreeRcv.click(() => { this.state.setterAt = 3; if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlThreeSrv.click(() => { this.state.setterAt = 3; if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
     this.rotationControls = this.svg.snapRoot.group(backgroundBoxes, headingLabels, rotationLabels, joinLines, setLines, controlCircles)
 
     this.rotationControls.transform(`t${1150 * this.svg.scale}, ${50 * this.svg.scale}`)
   }
 
-  drawActionControl () {
+  drawActionControl() {
     const xOffSet = 220
     const actionBox1 = this.svg.snapRoot.rect(0, 170 * this.svg.scale, xOffSet * this.svg.scale, 450 * this.svg.scale).attr({
       fill: this.colours.rotationControlBackgroundColourB
@@ -1147,8 +1147,8 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlBackgroundColourB
     })
     const actionBoxes = this.svg.snapRoot.group(actionBox1, actionBox2, actionBox3, actionBox4, actionBox5)
-// 990
-// 1240
+    // 990
+    // 1240
     const linkBar1 = this.svg.snapRoot.rect((4.5 * xOffSet) * this.svg.scale, 230 * this.svg.scale, (1240 - (4.5 * xOffSet)) * this.svg.scale, 40 * this.svg.scale).attr({
       fill: this.colours.rotationControlBackgroundColourB
     })
@@ -1161,7 +1161,7 @@ class VBTutorialServeReceieve extends VBTutorial {
     const linkBar4 = this.svg.snapRoot.rect(1400 * this.svg.scale, 120 * this.svg.scale, 40 * this.svg.scale, 370 * this.svg.scale).attr({
       fill: this.colours.rotationControlBackgroundColourB
     })
-    const linkLine1 = this.svg.snapRoot.line((xOffSet/2) * this.svg.scale, 250 * this.svg.scale, 1220 * this.svg.scale, 250 * this.svg.scale).attr({
+    const linkLine1 = this.svg.snapRoot.line((xOffSet / 2) * this.svg.scale, 250 * this.svg.scale, 1220 * this.svg.scale, 250 * this.svg.scale).attr({
       stroke: this.colours.rotationControlColour,
       strokeWidth: 1,
       'stroke-dasharray': 12 * this.svg.scale + ', ' + 12 * this.svg.scale
@@ -1171,7 +1171,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       strokeWidth: 1,
       'stroke-dasharray': 12 * this.svg.scale + ', ' + 12 * this.svg.scale
     })
-    const linkLine3 = this.svg.snapRoot.line((xOffSet/2) * this.svg.scale, 470 * this.svg.scale, 1420 * this.svg.scale, 470 * this.svg.scale).attr({
+    const linkLine3 = this.svg.snapRoot.line((xOffSet / 2) * this.svg.scale, 470 * this.svg.scale, 1420 * this.svg.scale, 470 * this.svg.scale).attr({
       stroke: this.colours.rotationControlColour,
       strokeWidth: 1,
       'stroke-dasharray': 12 * this.svg.scale + ', ' + 12 * this.svg.scale
@@ -1188,7 +1188,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 28 * this.svg.scale
     })
@@ -1197,7 +1197,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 28 * this.svg.scale
     })
@@ -1259,7 +1259,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     }).transform(`t${(0.5 * xOffSet) * this.svg.scale},${330 * this.svg.scale}`)
@@ -1267,7 +1267,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
@@ -1275,7 +1275,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
@@ -1285,7 +1285,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     }).transform(`t${(0.5 * xOffSet) * this.svg.scale}, ${550 * this.svg.scale}`)
@@ -1293,7 +1293,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
@@ -1301,7 +1301,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
@@ -1309,7 +1309,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
@@ -1317,39 +1317,39 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 36 * this.svg.scale
     })
     const textLabelR = this.svg.snapRoot.group(textLabelR1, textLabelR2, textLabelR3, textLabelR4, textLabelR5)
 
-    this.controlServeBase.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlServeServe.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeServe); this.move(this.playerPositions.servingServe[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlServeSwitch.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, true, this.controlServeSwitch); this.move(this.playerPositions.servingSwitch[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlReceiveBase.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlReceiveReceive.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveReceive); this.move(this.playerPositions.receivingPass[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlReceiveSet.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveSet); this.move(this.playerPositions.receivingSet[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlReceiveHit.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveHit); this.move(this.playerPositions.receivingAttack[this.state.setterAt], 600).then(() => this.state.moving = false)}})
-    this.controlReceiveSwitch.click(() => {if (!this.state.moving) {this.controlSelect(this.state.setterAt, false, this.controlReceiveSwitch); this.move(this.playerPositions.receivingSwitch[this.state.setterAt], 600).then(() => this.state.moving = false)}})
+    this.controlServeBase.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeBase); this.move(this.playerPositions.servingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlServeServe.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeServe); this.move(this.playerPositions.servingServe[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlServeSwitch.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, true, this.controlServeSwitch); this.move(this.playerPositions.servingSwitch[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlReceiveBase.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveBase); this.move(this.playerPositions.receivingBase[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlReceiveReceive.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveReceive); this.move(this.playerPositions.receivingPass[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlReceiveSet.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveSet); this.move(this.playerPositions.receivingSet[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlReceiveHit.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveHit); this.move(this.playerPositions.receivingAttack[this.state.setterAt], 600).then(() => this.state.moving = false) } })
+    this.controlReceiveSwitch.click(() => { if (!this.state.moving) { this.controlSelect(this.state.setterAt, false, this.controlReceiveSwitch); this.move(this.playerPositions.receivingSwitch[this.state.setterAt], 600).then(() => this.state.moving = false) } })
 
     this.actionControls = this.svg.snapRoot.group(actionBoxes, links, headingLabels, controlServe, controlReceive, textLabelS, textLabelR)
 
     this.actionControls.transform(`t${10 * this.svg.scale}, ${950 * this.svg.scale}`)
   }
 
-  controlSelect (setterPos, serving, action) {
-    this.controlTwoRcv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlTwoSrv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlOneRcv.attr({fill: this.colours.rotationControlBackgroundColourB})
-    this.controlOneSrv.attr({fill: this.colours.rotationControlBackgroundColourB})
-    this.controlSixRcv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlSixSrv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlFiveRcv.attr({fill: this.colours.rotationControlBackgroundColourB})
-    this.controlFiveSrv.attr({fill: this.colours.rotationControlBackgroundColourB})
-    this.controlFourRcv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlFourSrv.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlThreeRcv.attr({fill: this.colours.rotationControlBackgroundColourB})
-    this.controlThreeSrv.attr({fill: this.colours.rotationControlBackgroundColourB})
+  controlSelect(setterPos, serving, action) {
+    this.controlTwoRcv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlTwoSrv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlOneRcv.attr({ fill: this.colours.rotationControlBackgroundColourB })
+    this.controlOneSrv.attr({ fill: this.colours.rotationControlBackgroundColourB })
+    this.controlSixRcv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlSixSrv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlFiveRcv.attr({ fill: this.colours.rotationControlBackgroundColourB })
+    this.controlFiveSrv.attr({ fill: this.colours.rotationControlBackgroundColourB })
+    this.controlFourRcv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlFourSrv.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlThreeRcv.attr({ fill: this.colours.rotationControlBackgroundColourB })
+    this.controlThreeSrv.attr({ fill: this.colours.rotationControlBackgroundColourB })
 
     let currentControl
     if (setterPos === 1) {
@@ -1371,24 +1371,24 @@ class VBTutorialServeReceieve extends VBTutorial {
       currentControl = serving ? this.controlSixSrv : this.controlSixRcv
     }
 
-    currentControl.attr({fill: this.colours.rotationControlColour})
+    currentControl.attr({ fill: this.colours.rotationControlColour })
     this.actionSelect(action)
   }
 
-  actionSelect (action) {
-    this.controlServeBase.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlServeServe.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlServeSwitch.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlReceiveBase.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlReceiveReceive.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlReceiveSet.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlReceiveHit.attr({fill: this.colours.rotationControlBackgroundColourA})
-    this.controlReceiveSwitch.attr({fill: this.colours.rotationControlBackgroundColourA})
-    action.attr({fill: this.colours.rotationControlColour})
+  actionSelect(action) {
+    this.controlServeBase.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlServeServe.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlServeSwitch.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlReceiveBase.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlReceiveReceive.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlReceiveSet.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlReceiveHit.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    this.controlReceiveSwitch.attr({ fill: this.colours.rotationControlBackgroundColourA })
+    action.attr({ fill: this.colours.rotationControlColour })
   }
 
-  drawTutorialButton () {
-    const tutorialButtonBox = this.svg.snapRoot.rect(1410 * this.svg.scale , 1480 * this.svg.scale, 280 * this.svg.scale, 80 * this.svg.scale)
+  drawTutorialButton() {
+    const tutorialButtonBox = this.svg.snapRoot.rect(1410 * this.svg.scale, 1480 * this.svg.scale, 280 * this.svg.scale, 80 * this.svg.scale)
     tutorialButtonBox.attr({
       fill: this.colours.tutorialColour
     })
@@ -1397,7 +1397,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 44 * this.svg.scale,
     })
@@ -1410,7 +1410,7 @@ class VBTutorialServeReceieve extends VBTutorial {
     })
   }
 
-  drawTutorial (index) {
+  drawTutorial(index) {
     if (index >= this.tutorialData.length) {
       return
     }
@@ -1451,14 +1451,14 @@ class VBTutorialServeReceieve extends VBTutorial {
     this.tutorialTextBox = this.svg.snapRoot.group(textBox)
 
     const textChunks = this.tutorialData[index].text.split('\n')
-    for(var i = 0; i < textChunks.length; i++) {
+    for (var i = 0; i < textChunks.length; i++) {
       const textLine = this.svg.snapRoot.text(this.tutorialData[index].textPosition.left + (10 * this.svg.scale),
         this.tutorialData[index].textPosition.top + (42 * this.svg.scale) + (i * 40 * this.svg.scale),
         textChunks[i])
       textLine.attr({
         fill: this.colours.rotationControlColour,
         stroke: this.colours.rotationControlColour,
-        strokeWidth: 2  * this.svg.scale,
+        strokeWidth: 2 * this.svg.scale,
         'text-anchor': 'left',
         'font-family': 'Verdana',
         'font-size': 32 * this.svg.scale,
@@ -1484,7 +1484,7 @@ class VBTutorialServeReceieve extends VBTutorial {
       fill: this.colours.rotationControlColour,
       stroke: this.colours.rotationControlColour,
       strokeWidth: 2 * this.svg.scale,
-      'text-anchor':'middle',
+      'text-anchor': 'middle',
       'font-family': 'Verdana',
       'font-size': 44 * this.svg.scale,
       cursor: 'pointer',
@@ -1498,11 +1498,11 @@ class VBTutorialServeReceieve extends VBTutorial {
       this.tutorialTextBox.remove()
       this.tutorialNextButton.remove()
       this.tutorialMaskEdge.remove()
-      this.drawTutorial(index+1)
+      this.drawTutorial(index + 1)
     })
   }
 
-  move (players, time) {
+  move(players, time) {
     this.state.moving = true
 
     this.players.s.setPosition(players.s.x, players.s.y)
